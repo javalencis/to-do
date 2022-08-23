@@ -1,0 +1,41 @@
+.TodoItem{
+    list-style: none;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 64px;
+    background-color: #ffffff;
+    padding: 0 30px;
+    margin-bottom: 15px;
+    position: relative;
+    
+    
+}
+.Icon{
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 24px;
+}
+.TodoItem-p{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.Icon-check{
+    color: #00d539;
+}
+.TodoItem-p--completed{
+    text-decoration: line-through;
+}
+
+
+.Icon-delete{
+    position: absolute;
+    top:-10px;
+    right: 12px;
+ 
+
+}
+.Icon-delete:hover{
+    color: #ff0000;
+}

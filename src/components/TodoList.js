@@ -1,7 +1,7 @@
-
+import './TodoList.css'
 export const TodoList = (props) => {
   return (
-    <section>
+    <section className='TodoList'> 
         <ul>
             {props.children}
         </ul>
