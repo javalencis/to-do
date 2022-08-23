@@ -7,13 +7,23 @@ import { TodoSearch } from './components/TodoSearch';
 const defaultTodos = [
   { text: 'Cortar cebolla', completed: false },
   { text: 'Curso React', completed: false },
-  { text: 'Curso Javascript', completed: false }
+  { text: 'Curso Javascript', completed: false },
+  { text: 'Estudiar Real-Time', completed: false }
 ]
 function App() {
   const [todos, setTodos] = useState(defaultTodos);
   const [searchValue, setSearchValue] = useState('');
-  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
+  let todoList=[]
+  if (searchValue.length >= 3){
+    todoList = todos.filter(todo => todo.text.includes(searchValue))
+  }else{
+    todoList = todos
+  }
+ 
+
+
   return (
     <>
       <TodoCounter 
@@ -22,7 +32,7 @@ function App() {
       />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList>
-        {todos.map((todo, index) => {
+        {todoList.map((todo, index) => {
           return (<TodoItem key={index} text={todo.text} completed={todo.completed} />)
         })}
       </TodoList>
