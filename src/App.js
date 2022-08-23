@@ -21,6 +21,7 @@ function App() {
   }else{
     todoList = todos
   }
+
  
   return (
     <>
@@ -31,7 +32,7 @@ function App() {
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList>
         {todoList.map((todo, index) => {
-          return (<TodoItem key={index} text={todo.text} completed={todo.completed} />)
+          return (<TodoItem key={index} todos ={todos} todo={todo} setTodos={setTodos}/>)
         })}
       </TodoList>
       <CreateTodoButton />
