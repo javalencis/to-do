@@ -16,14 +16,13 @@ function App() {
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
   let todoList=[]
-  if (searchValue.length >= 3){
-    todoList = todos.filter(todo => todo.text.includes(searchValue))
+  if (searchValue.length >= 1){
+
+    todoList = todos.filter(todo => todo.text.toLowerCase().includes(searchValue.toLowerCase()))
   }else{
     todoList = todos
   }
  
-
-
   return (
     <>
       <TodoCounter 
