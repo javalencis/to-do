@@ -17,7 +17,6 @@ function App() {
   const totalTodos = todos.length;
   let todoList=[]
   if (searchValue.length >= 1){
-
     todoList = todos.filter(todo => todo.text.toLowerCase().includes(searchValue.toLowerCase()))
   }else{
     todoList = todos
