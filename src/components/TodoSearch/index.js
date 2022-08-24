@@ -1,6 +1,6 @@
-import { useState } from 'react'
+
 import './TodoSearch.css'
-export const TodoSearch = ({searchValue, setSearchValue}) => {
+export const TodoSearch = ({setSearchValue}) => {
 
   const onChangeSearch = (e) => {
     setSearchValue(e.target.value)
