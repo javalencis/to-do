@@ -1,7 +1,10 @@
 
+import { useContext } from 'react'
+import { TodoContext } from '../../TodoContext'
 import './TodoSearch.css'
-export const TodoSearch = ({setSearchValue}) => {
+export const TodoSearch = () => {
 
+  const {setSearchValue} = useContext(TodoContext)
   const onChangeSearch = (e) => {
     setSearchValue(e.target.value)
   }
@@ -11,7 +14,6 @@ export const TodoSearch = ({setSearchValue}) => {
     <div className='TodoSearch'>
       <input onChange={onChangeSearch} 
              placeholder="Buscar tarea" 
-          
             />
     </div>
 

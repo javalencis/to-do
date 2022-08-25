@@ -4,8 +4,8 @@ import { TodoCounter } from '../components/TodoCounter';
 import { TodoItem } from '../components/TodoItem';
 import { TodoList } from '../components/TodoList';
 import { TodoSearch } from '../components/TodoSearch';
-import { TodoProvider, TodoContext } from '../TodoContext';
-
+import { TodoContext } from '../TodoContext';
+import { Modal } from '../Modal'
 
 function App() {
 
@@ -25,9 +25,12 @@ function App() {
             onComplete={onComplete}
             onDelete={onDelete}
           />)
-          
+
         })}
       </TodoList>
+      <Modal>
+        <p>portales</p>
+      </Modal>
       <CreateTodoButton />
     </>
 

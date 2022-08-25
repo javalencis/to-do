@@ -36,7 +36,6 @@ export function useLocalStorage(itemName, initialValue) {
 
 
     }
-    console.log(error)
     return { item, saveItems, loading, error }
 }
 
