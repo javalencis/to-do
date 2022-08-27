@@ -13,6 +13,7 @@
     margin: 24px;
     cursor: pointer;
     transition: 500ms ease;
+    z-index: 1;
 }
 
 .CreateTodoButton:hover{

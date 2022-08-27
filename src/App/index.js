@@ -9,7 +9,7 @@ import { Modal } from '../Modal'
 
 function App() {
 
-  const { error, loading, todoList, onComplete, onDelete } = useContext(TodoContext)
+  const { error, loading, todoList, onComplete, onDelete, openModal} = useContext(TodoContext)
 
   return (
     <>
@@ -28,9 +28,7 @@ function App() {
 
         })}
       </TodoList>
-      <Modal>
-        <p>portales</p>
-      </Modal>
+      {openModal && (<Modal><p>Portales</p></Modal>)}
       <CreateTodoButton />
     </>
 

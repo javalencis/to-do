@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import './Modal.css'
 
 export function Modal(props){
     return ReactDOM.createPortal(
-        props.children,
+        <div className='Modal'>
+            {props.children}
+        </div>
+        ,
         document.getElementById('modal'))
 }
 
