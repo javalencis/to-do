@@ -16,6 +16,17 @@ export function TodoProvider(props) {
     } else {
         todoList = todos
     }
+
+    const addTodo = (text) => {
+
+        const newArray = [...todos]
+        newArray.push({
+            text,
+            completed: false
+        })
+        saveTodos(newArray)
+    }
+
     const onComplete = (text) => {
         const indexText = todos.findIndex(t => t.text === text)
         const newArray = [...todos]
@@ -43,7 +54,8 @@ export function TodoProvider(props) {
             onComplete,
             onDelete,
             openModal,
-            setOpenModal
+            setOpenModal,
+            addTodo
         }}>
             {props.children}
         </TodoContext.Provider>

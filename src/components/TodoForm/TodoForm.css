@@ -1,0 +1,60 @@
+.TodoForm{
+    background-color: white;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.TodoForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textAdvertencia{
+    color: red;
+}
+.TodoForm form textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 20px;
+
+}
+.TodoForm form textarea::placeholder,
+.TodoForm form textarea
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.TodoForm form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.TodoForm form button{
+    padding: 16px;
+    flex: auto;
+    border:none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+.Button-cancelar{
+    transition: 0.5s ease;
+}
+.Button-cancelar:hover{
+    background-color: rgb(223, 42, 42);
+    color: #ffffff;
+}
+.Button-anadir{
+    background-color: #00FFFF;
+    color: #000000;
+    transition: 0.5s ease;
+}
+.Button-anadir:hover{
+    background-color: #00D539;
+    color: #ffffff;
+}

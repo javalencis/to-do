@@ -5,6 +5,7 @@ import { TodoItem } from '../components/TodoItem';
 import { TodoList } from '../components/TodoList';
 import { TodoSearch } from '../components/TodoSearch';
 import { TodoContext } from '../TodoContext';
+import {TodoForm} from '../components/TodoForm'
 import { Modal } from '../Modal'
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
         })}
       </TodoList>
-      {openModal && (<Modal><p>Portales</p></Modal>)}
+      {openModal && (<Modal> <TodoForm/></Modal>)}
       <CreateTodoButton />
     </>
 
